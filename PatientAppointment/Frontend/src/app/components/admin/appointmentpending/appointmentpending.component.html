@@ -1,0 +1,39 @@
+<app-adminnav></app-adminnav>
+<div class="container mt-4">
+    <div class="text-center mb-3">
+        <h4>APPOINTMENTS DETAILS</h4>
+      </div>
+    <table class="table table-bordered table-hover table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Doctor Name</th>
+          <th>Specialization</th>
+          <th>Doctor Email</th>
+          <th>Patient Name</th>
+          <th>Patient Email</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.doctor?.doctor_Name }}</td>
+          <td>{{ appointment.doctor?.doctor_Specialization }}</td>
+          <td>{{ appointment.doctor?.doctor_Email }}</td>
+          <td>{{ appointment.patient?.patient_Name }}</td>
+          <td>{{ appointment.patient?.patient_Email }}</td>
+          <td>{{ appointment.appointmentDate | date:'shortDate' }}</td>
+          <td>{{ appointment.appointmentTime }}</td>
+          <td>{{ appointment.status }}</td>
+          <td>
+            <button class="btn btn-success" (click)="approveAppointment(appointment)">Approve</button>&nbsp;
+            <button class="btn btn-danger" (click)="declineAppointment(appointment)">Decline</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

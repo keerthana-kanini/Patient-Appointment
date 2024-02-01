@@ -1,0 +1,105 @@
+<div class="container col-11 col-md-9" id="form-container">
+    <div class="row gx-5">
+      <div class="col-md-6">
+        <h2>DOCTOR REGISTER</h2>
+        <form (ngSubmit)="onSubmit()" #doctorForm="ngForm">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" [(ngModel)]="doctorModel.doctor_Name" name="name"
+              placeholder="Enter your name" required>
+            <label for="name" class="form-label">Enter your name</label>
+            <div *ngIf="doctorForm.controls['name'].invalid && (doctorForm.controls['name'].dirty || submitted)"
+              class="text-danger">
+              Name is required.
+            </div>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" [(ngModel)]="doctorModel.doctor_Email" name="email"
+              placeholder="Enter your email" required>
+            <label for="email" class="form-label">Enter your email</label>
+            <div *ngIf="doctorForm.controls['email'].invalid && (doctorForm.controls['email'].dirty || submitted)"
+              class="text-danger">
+              Email is required.
+            </div>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <label for="gender" class="form-label"></label>
+            <select class="form-select" id="gender" [(ngModel)]="doctorModel.doctor_Gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">TransGender</option>
+            </select>
+            <div *ngIf="doctorForm.controls['gender'].invalid && (doctorForm.controls['gender'].dirty || submitted)"
+              class="text-danger">
+              Gender is required.
+            </div>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="dob" [(ngModel)]="doctorModel.doctor_DateOfBirth" name="dob"
+                placeholder="Enter your Date of Birth" required [max]="maxDate">
+            <label for="dob" class="form-label">Enter your Date of Birth</label>
+            <div *ngIf="doctorForm.controls['dob'].invalid && (doctorForm.controls['dob'].dirty || submitted)"
+                class="text-danger">
+                Date of Birth is required.
+            </div>
+        </div>
+        
+  
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="phone" [(ngModel)]="doctorModel.doctor_Phone" name="phone"
+              placeholder="Enter your Phone" required>
+            <label for="phone" class="form-label">Enter your Phone</label>
+            <div *ngIf="doctorForm.controls['phone'].invalid && (doctorForm.controls['phone'].dirty || submitted)"
+              class="text-danger">
+              Phone is required.
+            </div>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="location" [(ngModel)]="doctorModel.doctor_Location" name="location"
+              placeholder="Enter your Location" required>
+            <label for="location" class="form-label">Enter your Location</label>
+            <div *ngIf="doctorForm.controls['location'].invalid && (doctorForm.controls['location'].dirty || submitted)"
+              class="text-danger">
+              Location is required.
+            </div>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="specialization" [(ngModel)]="doctorModel.doctor_Specialization"
+              name="specialization" placeholder="Enter your Specialization" required>
+            <label for="specialization" class="form-label">Enter your Specialization</label>
+            <div *ngIf="doctorForm.controls['specialization'].invalid && (doctorForm.controls['specialization'].dirty || submitted)"
+              class="text-danger">
+              Specialization is required.
+            </div>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" [(ngModel)]="doctorModel.doctor_Password" name="password"
+              placeholder="Enter your Password" required>
+            <label for="password" class="form-label">Enter your Password</label>
+            <div *ngIf="doctorForm.controls['password'].invalid && (doctorForm.controls['password'].dirty || submitted)"
+              class="text-danger">
+              Password is required.
+            </div>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <img src="assets/doc5.png" alt="Sign up" class="img-fluid">
+          </div>
+          <div class="col-12" id="link-container">
+            <a href="/doctorlogin">I already have an account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,15 @@
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.deps.json
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.dll
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.pdb
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.AssemblyInfo.cs
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.csproj.CopyComplete
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.dll
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\refint\BussinessLogicLayer.dll
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.pdb
+C:\Users\KeerthanaRajendran\source\repos\Patient Appointment System\BussinessLogicLayer\obj\Debug\net8.0\ref\BussinessLogicLayer.dll

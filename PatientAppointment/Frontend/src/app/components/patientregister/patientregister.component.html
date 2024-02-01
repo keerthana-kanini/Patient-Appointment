@@ -1,0 +1,73 @@
+<div class="container col-11 col-md-9" id="form-container">
+  <div class="row gx-5">
+    <div class="col-md-6">
+      <h2>Complete your Registration</h2>
+      <form #registrationForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" [(ngModel)]="patientModel.patient_Name" name="name" placeholder="Enter your name" required>
+          <label for="name" class="form-label">Enter your name</label>
+          <div *ngIf="registrationForm.controls['name'].invalid && (registrationForm.controls['name'].dirty || registrationForm.controls['name'].touched)" class="text-danger">
+            Name is required.
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" [(ngModel)]="patientModel.patient_Email" name="email" placeholder="Enter your email" required email>
+          <label for="email" class="form-label">Enter your email</label>
+          <div *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)" class="text-danger">
+            Please enter a valid email address.
+          </div>
+        </div>
+      
+        <div class="form-floating mb-3">
+          <label for="gender" class="form-label"></label>
+          <select class="form-select" id="gender" [(ngModel)]="patientModel.patient_Gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">TransGender</option>
+          </select>
+          <div *ngIf="registrationForm.controls['gender'].invalid && (registrationForm.controls['gender'].dirty || registrationForm.controls['gender'].touched)" class="text-danger">
+            Gender is required.
+          </div>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input type="date" class="form-control" id="dob" [(ngModel)]="patientModel.patient_DateOfBirth" name="dob"
+              placeholder="Enter your Date of Birth" required [max]="maxDate">
+          <label for="dob" class="form-label">Enter your Date of Birth</label>
+          <div *ngIf="registrationForm.controls['dob'].invalid && (registrationForm.controls['dob'].dirty || registrationForm.controls['dob'].touched)"
+              class="text-danger">
+              Date of Birth is required.
+          </div>
+      </div>
+        
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="phone" [(ngModel)]="patientModel.patient_Phone" name="phone" placeholder="Enter your Phone" required pattern="[0-9]{10}">
+          <label for="phone" class="form-label">Enter your Phone</label>
+          <div *ngIf="registrationForm.controls['phone'].invalid && (registrationForm.controls['phone'].dirty || registrationForm.controls['phone'].touched)" class="text-danger">
+            Please enter a valid 10-digit phone number.
+          </div>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="location" [(ngModel)]="patientModel.patient_Location" name="location" placeholder="Enter your Location" required>
+          <label for="location" class="form-label">Enter your Location</label>
+          <div *ngIf="registrationForm.controls['location'].invalid && (registrationForm.controls['location'].dirty || registrationForm.controls['location'].touched)" class="text-danger">
+            Location is required.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <img src="assets/doc5.png" alt="Sign up" class="img-fluid">
+        </div>
+        <div class="col-12" id="link-container">
+          <a href="/patientlogin">I already have an account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

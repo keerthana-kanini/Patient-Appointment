@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header {
+    background-color: rgb(177, 230, 225);
+    height: 60px;
+    width: 95vw;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50px;
+  }
+  header > nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 18px;
+  }
+  header > nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  header > nav > ul > li > a:hover {
+    color: #e8b020;
+    text-transform: uppercase;
+    border-bottom: 2px solid aqua;
+  }
+  

@@ -1,0 +1,45 @@
+<app-adminnav></app-adminnav>
+
+<div class="container mt-4">
+<div class="table-responsive">
+    <div class="text-center mb-3">
+        <h4>DOCTOR PENDING DETAILS</h4>
+      </div>
+      <div class="mb-3">
+        <label for="search">Search by Name:</label>
+        <input type="text" id="search" [(ngModel)]="searchTerm" (input)="filterDoctors()">
+      </div>
+
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Date of Birth</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Location</th>
+          <th scope="col">Specialization</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doctor of filteredDoctors">
+          <td>{{ doctor.doctor_Name }}</td>
+          <td>{{ doctor.doctor_Gender }}</td>
+          <td>{{ doctor.doctor_DateOfBirth | date }}</td>
+          <td>{{ doctor.doctor_Email }}</td>
+          <td>{{ doctor.doctor_Phone }}</td>
+          <td>{{ doctor.doctor_Location }}</td>
+          <td>{{ doctor.doctor_Specialization }}</td>
+          <td>{{ doctor.doctor_Status }}</td>
+          <td>
+            <button (click)="approveDoctor(doctor)" class="btn btn-success">Approve</button>&nbsp;
+            <button (click)="declineDoctor(doctor)" class="btn btn-danger">Decline</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-patientstatus></app-patientstatus>

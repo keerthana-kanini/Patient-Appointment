@@ -1,0 +1,94 @@
+.modal-confirm {
+    color: #333;
+    width: 400px;
+    font-size: 16px;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-confirm .modal-header {
+    background: white;
+    color: #fff;
+    border-bottom: none;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+.modal-confirm .form-control,
+.modal-confirm .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.modal-confirm .modal-body {
+    padding: 20px;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.modal-confirm .icon-box {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -25px;
+    background: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-confirm .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+.modal-confirm.modal-dialog {
+    margin-top: 80px;
+}
+
+.modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #4CAF50;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+    background: #45a049;
+    outline: none;
+}

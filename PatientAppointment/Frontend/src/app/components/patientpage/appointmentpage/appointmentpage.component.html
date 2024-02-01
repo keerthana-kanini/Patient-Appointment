@@ -1,0 +1,141 @@
+<nav class="navbar navbar-expand-lg nav-back fixed-top" 
+id="mainNav">
+  <div class="container">
+    <a class="navbar-brand ml-3" routerLink="/"><img src="assets/logo.jpg" height="55" style="border-radius: 100px;margin-right: 10px;" class="logo-image">MEDICAL CARE</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button"
+       data-toggle="collapse" data-target="#navbarResponsive" 
+       aria-controls="navbarResponsive" aria-expanded="false" 
+       aria-label="Toggle navigation"><i class="fas fa-syringe fa-2x"></i>
+       </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" 
+              routerLink="/main">Home</a></li>
+              <li class="nav-item"><a class="nav-link" 
+                routerLink="/bookappointment">Doctors</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+   
+
+   <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative">
+      <h1>24/7 Care is available</h1>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti.</h2>
+      <a href="#about" class="main-btn">Get Started</a>
+    </div>
+  </section>
+>
+  <div class="container mt-4 p-4">
+      <div class="row">
+          <div class="col-md-6">
+              <h2 class="text-center my-4">
+                  Find Consultations
+              </h2>
+              <form [formGroup]="appointmentForm">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                      Patient Name
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                      <input type="text" id="patient-name" class="form-control" placeholder="Name" [value]="patient?.patient_Name" disabled required>
+                    </div>
+                  </div>
+                
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                      Contact
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                      <input type="tel" id="contact" class="form-control" placeholder="123" [value]="patient?.patient_Phone" disabled required>
+                    </div>
+                  </div>
+                
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                      Email
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                      <input type="email" id="email" class="form-control" placeholder="email@example.com" [value]="patient?.patient_Email" disabled required>
+                    </div>
+                  </div>
+                
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                      Location
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                      <input type="text" id="location" class="form-control" placeholder="Location" [value]="patient?.patient_Location" disabled required>
+                    </div>
+                  </div>
+                
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">Date</label>
+                    <div class="col-sm-8 col-lg-8">
+                      <input type="date" formControlName="appointmentDate" class="form-control" [min]="minDate">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">Time</label>
+                    <div class="col-sm-8 col-lg-8">
+                      <select formControlName="appointmentTime" class="form-control">
+                        <option value="" disabled selected>Select Time</option>
+                        <option
+                          *ngFor="let time of availableTimes"
+                          [value]="time"
+                          [attr.disabled]="bookedSlots.includes(time) ? true : null"
+                        >
+                          {{ time }}
+                        </option>
+                      </select>
+                      <div *ngIf="bookedSlots.includes(appointmentForm.get('appointmentTime')?.value)" class="text-danger mt-2">
+                        This time slot is already booked. Please choose another.
+                      </div>
+                    </div>
+                  </div>
+                  
+                
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                      Symptoms
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                      <textarea id="symptoms" class="form-control" required></textarea>
+                    </div>
+                  </div>
+                
+                  <div class="form-group row justify-content-end">
+                    <div class="col-sm-5">
+                      <button type="button" class="btn btn-form" (click)="onConfirm()">Confirm</button>
+                    </div>
+                  </div>
+                
+                </form>
+          </div>
+          <div class="col-md-6">
+              <h2 id="services" class="text-center my-4"></h2>
+              <ul id="consultations"class="list-group"></ul>
+          </div>
+      </div>
+  </div>
+  <footer class="footer py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-left">Copyright © Medical Care</div>
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="btn btn-back btn-social mx-2" href="#!">
+                  <i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-back btn-social mx-2" href="#!">
+                    <i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-back btn-social mx-2" href="#!">
+                      <i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="col-lg-4 text-lg-right">
+              <a class="mr-3 text" href="#!">Privacy Policy</a>
+              <a href="#!"class="text">Terms of Use</a></div>
+        </div>
+    </div>
+</footer>

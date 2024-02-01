@@ -1,0 +1,36 @@
+<div class="container col-11 col-md-9" id="form-container">
+    <div class="row align-items-center gx-5">
+      <div class="col-md-6 order-md-2">
+        <h2>Login to continue</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter your email">
+            <label for="email" class="form-label">Enter your email</label>
+            <div *ngIf="formControls['email'].touched && formControls['email'].hasError('required')" class="text-danger">
+              Email is required.
+            </div>
+            <div *ngIf="formControls['email'].touched && formControls['email'].hasError('email')" class="text-danger">
+              Invalid email format.
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter your password">
+            <label for="password" class="form-label">Enter your password</label>
+            <div *ngIf="formControls['password'].touched && formControls['password'].hasError('required')" class="text-danger">
+              Password is required.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-4">Login</button>
+        </form>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="col-12">
+          <img src="assets/doc6.png" alt="Login" class="img-fluid">
+        </div>
+        <div class="col-12" id="link-container">
+          <a routerLink="/patientreg">I don't have an account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,40 @@
+<div class="container mt-4">
+<div class="table-responsive">
+    <div class="text-center mb-3">
+        <h4>PATIENTS PENDING DETAILS</h4>
+      </div>
+      <div class="mb-3">
+        <label for="search">Search by Name:</label>
+        <input type="text" id="search" [(ngModel)]="searchTerm" (input)="filterPatients()">
+      </div>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Date of Birth</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Location</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of filteredPatients">
+          <td>{{ patient.patient_Name }}</td>
+          <td>{{ patient.patient_Gender }}</td>
+          <td>{{ patient.patient_DateOfBirth | date }}</td>
+          <td>{{ patient.patient_Email }}</td>
+          <td>{{ patient.patient_Phone }}</td>
+          <td>{{ patient.patient_Location }}</td>
+          <td>{{ patient.patient_Status }}</td>
+          <td>
+            <button (click)="approvePatient(patient)" class="btn btn-success">Approve</button>&nbsp;
+            <button (click)="declinePatient(patient)" class="btn btn-danger">Decline</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

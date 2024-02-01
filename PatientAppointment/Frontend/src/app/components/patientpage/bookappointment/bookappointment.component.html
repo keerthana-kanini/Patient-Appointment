@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>&nbsp;&nbsp;
+<div class="col-lg-6 text-center">
+  <div class="section-title">
+    <h2>Doctors</h2>
+    <div class="divider mx-auto my-4"></div>
+    <p>We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque, voluptate. Beatae officiis neque </p>
+  </div>
+</div>
+
+<div class="filter-container">
+  <label for="specialization">Filter by Specialization:</label>
+  <select id="specialization" [(ngModel)]="selectedSpecialization" (ngModelChange)="filterDoctors()">
+    <option value="" selected>All Specializations</option>
+    <option *ngFor="let specialization of getUniqueSpecializations()" [value]="specialization">{{ specialization }}</option>
+  </select>
+</div>
+
+<div class="doctor-container">
+  <div *ngFor="let doctor of doctors" class="doctor-card">
+    <img [src]="getDoctorPhotoUrl(doctor)" alt="Doctor Photo">
+    <h3>{{ doctor.doctor_Name }}</h3>
+    <p>{{ doctor.doctor_Specialization }}</p>
+    <button (click)="bookAppointment(doctor)">Book Appointment</button>
+  </div>
+</div>

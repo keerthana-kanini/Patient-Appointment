@@ -1,0 +1,17 @@
+.container {
+    margin-top: 20px;
+  }
+  .navbar{
+    background: rgba(17, 219, 207,0.8);
+  }
+  .navbar-nav{
+    margin-left: 71%;
+  }
+  .navbar-nav .nav-link {
+    color: #000;
+  }
+
+  .navbar-nav .nav-item:not(.nav-link) {
+    color: #333; 
+  }
+  

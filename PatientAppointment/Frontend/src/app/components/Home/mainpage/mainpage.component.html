@@ -1,0 +1,285 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" routerLink="/"><img src="assets/logo.jpg" height="55" style="border-radius: 100px;margin-right: 10px;" class="logo-image">MEDICAL CARE</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav "> 
+            <li class="nav-item navbar-dark">
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" routerLink="/docpage">DOCTOR</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/bookappointment">APPOINTMENT</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    LOGIN/REGISTER
+                </a>
+                <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                    <a class="dropdown-item" routerLink="/adminlogin">ADMIN LOGIN</a>
+                    <a class="dropdown-item" href="/doctorlogin">DOCTOR LOGIN/REGISTER</a>
+                    <a class="dropdown-item" href="/patientlogin">PATIENT LOGIN/REGISTER</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" style="height: 500px;">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="assets/c3.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="assets/c4.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="assets/c5.png" alt="Third slide">
+        </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="feature-block d-lg-flex">
+                <div class="feature-item mb-5 mb-lg-0">
+                    <div class="feature-icon mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="60" fill="currentColor" class="bi bi-calendar2-heart" viewBox="0 0 16 16">
+                                <path  fill="gray" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm2 .5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5zm5 4.493c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                              </svg>
+                        </div>
+                        <span>24 Hours Service</span>
+                        <h4 class="mb-3">Online Appointment</h4>
+                        <p class="mb-4">Get all-time support for emergencies. We have introduced the principle of family medicine.</p>
+                        <button (click)="onMakeAppointment()" class="btn btn-main btn-round-full bg-info">Make an appointment</button>
+                    </div>
+
+                    <div class="feature-item mb-5 mb-lg-0">
+                        <div class="feature-icon mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="60" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                <path fill="gray" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                              </svg>
+                              
+                        </div>
+                        <span>Timing schedule</span>
+                        <h4 class="mb-3">Working Hours</h4>
+                        <ul class="w-hours list-unstyled">
+                            <li class="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
+                            <li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
+                            <li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-item mb-5 mb-lg-0">
+                        <div class="feature-icon mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="80" height="60" viewBox="0 0 48 48"><g id="Artworks">
+                            <path fill="gray" d="M45,19h-.051A19.007,19.007,0,0,0,26,1H22A19.007,19.007,0,0,0,3.051,19,3,3,0,0,0,0,22v8a3,3,0,0,0,3,3H7a1,1,0,0,0,1-1V20a1,1,0,0,0-1-1H5.051A16.986,16.986,0,0,1,12.708,5.782l1.534,2.562A1,1,0,0,0,15.6,8.7,12.878,12.878,0,0,1,22,7h4a12.878,12.878,0,0,1,6.4,1.7,1,1,0,0,0,1.356-.354l1.534-2.562A16.986,16.986,0,0,1,42.949,19H41a1,1,0,0,0-1,1V32a1,1,0,0,0,1,1h1.949A10.013,10.013,0,0,1,33,42H29.858A4,4,0,0,0,26,39H22a4,4,0,0,0,0,8h4a4,4,0,0,0,3.858-3H33A12.009,12.009,0,0,0,44.949,33,3,3,0,0,0,48,30V22A3,3,0,0,0,45,19ZM6,21V31H3a1,1,0,0,1-1-1V22a1,1,0,0,1,1-1ZM32.529,6.5A14.907,14.907,0,0,0,26,5H22a14.907,14.907,0,0,0-6.529,1.5l-1.024-1.71A16.865,16.865,0,0,1,22,3h4a16.865,16.865,0,0,1,7.553,1.793ZM26,45H22a2,2,0,0,1,0-4h4a2,2,0,0,1,0,4ZM46,30a1,1,0,0,1-1,1H42V21h3a1,1,0,0,1,1,1ZM25.638,35l5.722,4.769A1,1,0,0,0,32,40a.989.989,0,0,0,.424-.095A1,1,0,0,0,33,39V35h2a3,3,0,0,0,3-3V16a3,3,0,0,0-3-3H13a3,3,0,0,0-3,3V32a3,3,0,0,0,3,3ZM15,18H33a1,1,0,0,1,0,2H15a1,1,0,0,1,0-2Zm0,5H33a1,1,0,0,1,0,2H15a1,1,0,0,1,0-2Zm0,5H33a1,1,0,0,1,0,2H15a1,1,0,0,1,0-2Z"/></g></svg>
+                        </div>
+                        <span>Emergency Cases</span>
+                        <h4 class="mb-3">1-800-700-6200</h4>
+                        <p>Get all-time support for emergencies. We have introduced the principle of family medicine. Get connected with us for any urgency.</p>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <section class="section about">
+                    <div class="container1">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="about-img">
+                                    <img src="assets/img-1.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img-2.jpg" alt="" class="img-fluid mt-4">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="about-img mt-4 mt-lg-0">
+                                    <img src="assets/img-3.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-content pl-4 mt-4 mt-lg-0">
+                                    <h2 class="title-color">Personal care <br>&amp; healthy living</h2>
+                                    <p class="mt-4 mb-5">We provide best leading medicle service Nulla perferendis veniam deleniti ipsum officia dolores repellat laudantium obcaecati neque.</p>
+                
+                                    <a href="" class="btn btn-main-2 btn-round-full btn-icon bg-info">Services<i class="icofont-simple-right ml-3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="container2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>Award winning patient care</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="service-item mb-4">
+                                <div class="icon d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="60" height="50" viewBox="0 0 448 512">
+                                        <path d="M288 0H160 128C110.3 0 96 14.3 96 32s14.3 32 32 32V196.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512H378.6c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H288zM192 196.8V64h64V196.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/>
+                                    </svg>
+                                    <h4 class="mt-3 mb-3">Laboratory services</h4>
+                                </div>            
+                                <div class="content">
+                                    <p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="service-item mb-4">
+                                <div class="icon d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="60" height="50" viewBox="0 0 512 512">
+                                        <path d="M228.3 469.1L47.6 300.4c-4.2-3.9-8.2-8.1-11.9-12.4h87c22.6 0 43-13.6 51.7-34.5l10.5-25.2 49.3 109.5c3.8 8.5 12.1 14 21.4 14.1s17.8-5 22-13.3L320 253.7l1.7 3.4c9.5 19 28.9 31 50.1 31H476.3c-3.7 4.3-7.7 8.5-11.9 12.4L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9zM503.7 240h-132c-3 0-5.8-1.7-7.2-4.4l-23.2-46.3c-4.1-8.1-12.4-13.3-21.5-13.3s-17.4 5.1-21.5 13.3l-41.4 82.8L205.9 158.2c-3.9-8.7-12.7-14.3-22.2-14.1s-18.1 5.9-21.8 14.8l-31.8 76.3c-1.2 3-4.2 4.9-7.4 4.9H16c-2.6 0-5 .4-7.3 1.1C3 225.2 0 208.2 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141C165 36.5 211.4 51.4 244 84l12 12 12-12c32.6-32.6 79-47.5 124.6-39.9C461.5 55.6 512 115.2 512 185.1v5.8c0 16.9-2.8 33.5-8.3 49.1z"/></svg>
+                                    <h4 class="mt-3 mb-3">Heart Disease</h4>
+                                </div>
+                                <div class="content">
+                                    <p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="service-item mb-4">
+                                <div class="icon d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="60" height="50" viewBox="0 0 448 512">
+                                        <path d="M186.1 52.1C169.3 39.1 148.7 32 127.5 32C74.7 32 32 74.7 32 127.5v6.2c0 15.8 3.7 31.3 10.7 45.5l23.5 47.1c4.5 8.9 7.6 18.4 9.4 28.2l36.7 205.8c2 11.2 11.6 19.4 22.9 19.8s21.4-7.4 24-18.4l28.9-121.3C192.2 323.7 207 312 224 312s31.8 11.7 35.8 28.3l28.9 121.3c2.6 11.1 12.7 18.8 24 18.4s20.9-8.6 22.9-19.8l36.7-205.8c1.8-9.8 4.9-19.3 9.4-28.2l23.5-47.1c7.1-14.1 10.7-29.7 10.7-45.5v-2.1c0-55-44.6-99.6-99.6-99.6c-24.1 0-47.4 8.8-65.6 24.6l-3.2 2.8 19.5 15.2c7 5.4 8.2 15.5 2.8 22.5s-15.5 8.2-22.5 2.8l-24.4-19-37-28.8z"/></svg>
+                                    <h4 class="mt-3 mb-3">Dental Care</h4>
+                                </div>
+                                <div class="content">
+                                    <p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="service-item mb-4">
+                                <div class="icon d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="60" height="50" viewBox="0 0 448 512">
+                                    <path d="M272 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm-8 187.3l47.4 57.1c11.3 13.6 31.5 15.5 45.1 4.2s15.5-31.5 4.2-45.1l-73.7-88.9c-18.2-22-45.3-34.7-73.9-34.7H177.1c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9V480c0 17.7 14.3 32 32 32s32-14.3 32-32V352h16V480c0 17.7 14.3 32 32 32s32-14.3 32-32V235.3zM352 376c0-4.4 3.6-8 8-8s8 3.6 8 8V488c0 13.3 10.7 24 24 24s24-10.7 24-24V376c0-30.9-25.1-56-56-56s-56 25.1-56 56v8c0 13.3 10.7 24 24 24s24-10.7 24-24v-8z"/></svg>
+
+                                    <h4 class="mt-3 mb-3">Body Surgery</h4>
+                                </div>
+            
+                                <div class="content">
+                                    <p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="service-item mb-4">
+                                <div class="icon d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="60" height="50" viewBox="0 0 512 512">
+                                        <path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
+                                    <h4 class="mt-3 mb-3">Neurology Sargery</h4>
+                                </div>
+                                <div class="content">
+                                    <p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="service-item mb-4">
+                                <div class="icon d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="60" height="50" viewBox="0 0 448 512">
+                                        <path d="M416 0c17.7 0 32 14.3 32 32c0 59.8-30.3 107.5-69.4 146.6c-28 28-62.5 53.5-97.3 77.4l-2.5 1.7c-11.9 8.1-23.8 16.1-35.5 23.9l0 0 0 0 0 0-1.6 1c-6 4-11.9 7.9-17.8 11.9c-20.9 14-40.8 27.7-59.3 41.5H283.3c-9.8-7.4-20.1-14.7-30.7-22.1l7-4.7 3-2c15.1-10.1 30.9-20.6 46.7-31.6c25 18.1 48.9 37.3 69.4 57.7C417.7 372.5 448 420.2 448 480c0 17.7-14.3 32-32 32s-32-14.3-32-32H64c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-59.8 30.3-107.5 69.4-146.6c28-28 62.5-53.5 97.3-77.4c-34.8-23.9-69.3-49.3-97.3-77.4C30.3 139.5 0 91.8 0 32C0 14.3 14.3 0 32 0S64 14.3 64 32H384c0-17.7 14.3-32 32-32zM338.6 384H109.4c-10.1 10.6-18.6 21.3-25.5 32H364.1c-6.8-10.7-15.3-21.4-25.5-32zM109.4 128H338.6c10.1-10.7 18.6-21.3 25.5-32H83.9c6.8 10.7 15.3 21.3 25.5 32zm55.4 48c18.4 13.8 38.4 27.5 59.3 41.5c20.9-14 40.8-27.7 59.3-41.5H164.7z"/></svg>
+                                    <h4 class="mt-3 mb-3">Gynecology</h4>
+                                </div>
+                                <div class="content">
+                                    <p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<footer class="footer section gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mr-auto col-sm-6">
+                <div class="widget mb-5 mb-lg-0">
+                    <div class="logo mb-4">
+                        <img src="assets/logo.jpg" height="100" style="border-radius: 100px;margin-right: 10px;" class="logo-image">
+                    </div>
+                    <p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
+
+                    <ul class="list-inline footer-socials mt-4">
+                        <li class="list-inline-item"><a href="#"><i class="icofont-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="icofont-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="icofont-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="widget mb-5 mb-lg-0">
+                    <h4 class="text-capitalize mb-3">Department</h4>
+                    <div class="divider mb-4"></div>
+
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a>Surgery </a></li>
+                        <li><a >Wome's Health</a></li>
+                        <li><a >Radiology</a></li>
+                        <li><a >Cardioc</a></li>
+                        <li><a >Medicine</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="widget mb-5 mb-lg-0">
+                    <h4 class="text-capitalize mb-3">Support</h4>
+                    <div class="divider mb-4"></div>
+
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a>Terms &amp; Conditions</a></li>
+                        <li><a>Privacy Policy</a></li>
+                        <li><a>Company Support </a></li>
+                        <li><a>FAQuestions</a></li>
+                        <li><a>Company Licence</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        
+        <div class="footer-btm py-4 mt-5">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6">
+                    <div class="copyright" style="align-items: center;">
+                        © Copyright Reserved to <span class="text-color">MedicalCare</span> by <a href="#" target="_blank">KANINI</a>
+                    </div>
+                </div>
+            </div>
